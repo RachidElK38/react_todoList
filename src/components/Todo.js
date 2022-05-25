@@ -29,7 +29,11 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
         {todo.text}
       </div>
       <div className='icons'>
-        
+        <button onClick={() => removeTodo(todo.id)}
+          className='delete-icon'>Delete</button>
+
+          <button  onClick={() => setEdit({ id: todo.id, value: todo.text })}
+          className='edit-icon'>Edit</button>
       </div>
     </div>
   ));
